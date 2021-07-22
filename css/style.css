@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+@font-face {
+  font-family: Cyber;
+  src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+  font-display: swap;
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+    background-image: url("https://i.ibb.co/pR1W4z8/sfondo.jpg");
+  background-size: cover;
+  }
+
+.bgimg{
+  height: 100vh;
+  width: 100%;
+    background-image: url("https://i.ibb.co/pR1W4z8/sfondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 5s;
+
+  animation-name: animate;
+  animation-direction: alternate-reverse;
+  animation-duration: 40s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes animate{
+  0%{
+    background-image: url("https://live.staticflickr.com/65535/51327724378_aa49fe65e0_k.jpg");
+  }
+  20%{
+    background-image: url("https://live.staticflickr.com/65535/51327524111_c1cec13fb6_k.jpg");
+  }
+  40%{
+    background-image: url("https://live.staticflickr.com/65535/51327524101_cbabe1b503_k.jpg");
+  }
+  60%{
+    background-image: url("https://live.staticflickr.com/65535/51327724378_aa49fe65e0_k.jpg");
+  }
+  80%{
+    background-image: url("https://live.staticflickr.com/65535/51327524111_c1cec13fb6_k.jpg");
+  }
+  100%{
+    background-image: url("https://live.staticflickr.com/65535/51327724378_aa49fe65e0_k.jpg");
+  }
+}
+
+.navbar{
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	top: 0;
+	left: 0;
+  text-align:center;
+	background: rgba(0,0,0,0.4);
+}
+.navbar .logo{
+	width: 140px;
+	height: auto;
+	padding: 20px 100px;
+}
+.navbar ul{
+  display:block;
+  margin:auto;
+}
+.navbar ul li{
+	list-style: none;
+	margin: 0 8px;
+	display: inline-block;
+	line-height: 80px;
+}
+.navbar ul li a{
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	padding: 6px 13px;
+	text-decoration: none;
+	transition: .4s;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{
+	background: #E50914;
+	border-radius: 2px;
+}
+.wrapper .center{
+	position: absolute;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, -50%);
+	font-family: sans-serif;
+	user-select: none;
+}
+
+#container {
+    color:#999;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 15px 54px 15px 54px;
+    position: absolute;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.719);
+    border: 2px solid #180000;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+
+#flip {
+  height:50px;
+  overflow:hidden;
+}
+
+#flip > div > div {
+  color:#fff;
+  padding: 4px 12px;
+  height:45px;
+  margin-bottom: 52px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 6s linear infinite;
+}
+
+#flip div div {
+  background:#E50914;
+}
+#flip div:first-child div {
+  background:#6809e5;
+}
+#flip div:last-child div {
+  background:#DC143C;
+}
+
+@keyframes show {
+    0% {margin-top:-270px;}
+    5% {margin-top:-180px;}
+    33% {margin-top:-180px;}
+    38% {margin-top:-90px;}
+    66% {margin-top:-90px;}
+    71% {margin-top:0px;}
+    99.99% {margin-top:0px;}
+    100% {margin-top:-270px;}
+  }
+
+  #container .btn {
+    font-family: 'Lato';
+    font-size: 20px;
+    background: #be2020;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-weight: 700;
+    position: relative;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    font-family: Cyber;
+  }
+
+  #container .btn:hover{
+    color: rgb(129, 129, 129);
+    background: #690707;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  
+  #container .btn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  @media screen and (min-width: 320px){
+    
+    .navbar{
+        height: 40px;
+        padding: 1px 0;
+    }
+
+    .navbar ul{
+      margin-top: -1.5rem;
+    }
+    
+    .navbar ul li{
+        margin: 0 3px;
+    }
+    
+    .navbar ul li a{
+      font-size: 12.5px;
+      padding: 4px 6px;
+    }    
+   #container{
+     font-size: 15px;
+   }
+
+   #container .btn{
+     font-size: 12px;
+   }
+
+  }
+
+  @media screen and (min-width: 481px){
+    
+    .navbar{
+        height: 55px;
+        padding: 1px 0;
+    }
+
+    .navbar ul{
+      margin-top: -1.5rem;
+    }
+    
+    .navbar ul li{
+        margin: 0 12px;
+    }
+    
+    .navbar ul li a{
+      font-size: 16.5px;
+      padding: 4px 6px;
+    }    
+   #container{
+     font-size: 20px;
+     padding: 25px 60px;
+   }
+
+   #container .btn{
+     font-size: 17px;
+   }
+
+  }
+
+  @media screen and (min-width: 768px){
+    
+    .navbar{
+        height: 75px;
+        padding: 8px 0;
+    }
+
+    .navbar ul{
+      margin-top: -1.5rem;
+    }
+    
+    .navbar ul li{
+        margin: 0 12px;
+    }
+    
+    .navbar ul li a{
+      font-size: 25.5px;
+      padding: 4px 6px;
+    }    
+   #container{
+     font-size: 32px;
+     padding: 25px 60px;
+   }
+
+   #container .btn{
+     font-size: 25px;
+     padding: 7px 34px;
+   }
+
+  }
+
+
+  @media screen and (min-width: 1024px){
+    
+    .navbar{
+        height: 105px;
+        padding: 25px 0;
+    }
+
+    .navbar ul{
+      margin-top: -1.5rem;
+    }
+    
+    .navbar ul li{
+        margin: 0 12px;
+    }
+    
+    .navbar ul li a{
+      font-size: 32.5px;
+      padding: 4px 6px;
+    }    
+   #container{
+     font-size: 35.5px;
+     padding: 35px 120px;
+   }
+
+   #container .btn{
+     font-size: 32px;
+     padding: 5px 37px;
+   }
+
+  }
+
+  
+  @media screen and (min-width: 1200px){
+    
+    .navbar{
+        height: 75px;
+        padding: 12px 0;
+    }
+
+    .navbar ul{
+      margin-top: -1.5rem;
+    }
+    
+    .navbar ul li{
+        margin: 0 12px;
+    }
+    
+    .navbar ul li a{
+      font-size: 25.5px;
+      padding: 4px 6px;
+    }    
+   #container{
+     font-size: 32.5px;
+     padding: 35px 120px;
+   }
+
+   #container .btn{
+     font-size: 22px;
+     padding: 5px 30px;
+   }
+
+  }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Lupin Quiz</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+		<link href="css/lupinstyle.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div id="quizContainer" class="container">
+			<div class="title">Lupin Quiz</div>
+			<div id="question" class="question"></div>
+			<label class="option"><input type="radio" name="option" value="1" /> <span id="opt1"></span></label>
+			<label class="option"><input type="radio" name="option" value="2" /> <span id="opt2"></span></label>
+			<label class="option"><input type="radio" name="option" value="3" /> <span id="opt3"></span></label>
+			<label class="option"><input type="radio" name="option" value="4" /> <span id="opt4"></span></label>
+           
+            <button id="nextButton" class="cybr-btn" onclick="loadNextQuestion();">Next </button>        
+              
+              <button id="homeButton" class="cybr-btn" onclick="window.location.href='index.html'">Home</button>      
+		</div>
+
+		<div id="result" class="container result" style="display:none;">  
+		</div>
+        <div class="bott">
+
+        <button id="homeButton2" class="cybr-btn" onclick="window.location.href='index.html'" style="display:none;">Home 
+        </button>  
+        <button id="tryButton" class="cybr-btn" onclick="window.location.href='qlupin.html'" style="display:none;">Try Again
+          </button>  
+        </div>
+          
+		<script src="javascript/quiz-script.js"></script>
+	</body>
+</html>
